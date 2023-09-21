@@ -34,7 +34,7 @@ void bubble_sort(int *array, size_t size)
 }
 
 /**
- * swap - swaps the the data of of two index in an array
+ * bubbleSwap - swaps the the data of of two index in an array
  * @x: pointer to the first index
  * @y: pointer to the second index
  *
