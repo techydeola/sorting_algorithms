@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stddef.h>
 #include "sort.h"
 
 /**
@@ -20,14 +21,30 @@ void bubble_sort(int *array, size_t size)
 
 		for (j = 0; j < (size - i - 1); j++)
 		{
-			if (*array[j] > *array[j + 1])
+			if (array[j] > array[j + 1])
 			{
 				swap(&array[j], &array[j + 1]);
 				swapped = 1;
-				print_array(&array, size);
+				print_array(array, size);
 			}
 		}
 		if (swapped == 0)
 			break;
 	}
+}
+
+/**
+ * swap - swaps the the data of of two index in an array
+ * @x: pointer to the first index
+ * @y: pointer to the second index
+ *
+ * Return: nothing
+ */
+
+void swap(int *x, int *y)
+{
+	int temp = *x;
+
+	*x = *y;
+	*y = temp;
 }
