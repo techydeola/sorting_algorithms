@@ -13,6 +13,7 @@ void selection_sort(int *array, size_t size)
 {
 	size_t i, j;
 	size_t min_idx;
+	int temp;
 
 	if (array == NULL || size <= 1)
 		return;
@@ -28,24 +29,10 @@ void selection_sort(int *array, size_t size)
 		}
 		if (min_idx != i)
 		{
-			selectionSwap(&array[min_idx], &array[i]);
+			temp = array[min_idx];
+			array[min_idx] = array[i];
+			array[i] = temp;
 			print_array(array, size);
 		}
 	}
-}
-
-/**
- * selectionSwap - swaps the the data of of two index in an array
- * @x: pointer to the first index
- * @y: pointer to the second index
- *
- * Return: nothing
- */
-
-void selectionSwap(int *x, int *y)
-{
-	int temp = *x;
-
-	*x = *y;
-	*y = temp;
 }
