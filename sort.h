@@ -28,6 +28,8 @@ int partition(int *A, int lo, int hi);
 void quick_sort(int *array, size_t size);
 void swap(int *x, int *y);
 void quick_sort_recursive(int *array, size_t size, int lo, int hi);
+void swap_element(int *array, int i, int j);
+void shell_sort(int *array, size_t size);
 
 #endif
 
