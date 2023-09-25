@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _swap - swaped 2 values.
+ * swap_element - swaped 2 values.
  * @array: the array for swap him values.
  * @i: First index
  * @j: Second index
